@@ -139,7 +139,7 @@ public class WeChatUtil {
     }
 
     /**
-     * @Description: sha1加密
+     * @Description: sha1加 密
      * @param decript
      * @Author: bai.yan
      * @Date: 2019/10/12 11:56
