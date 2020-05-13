@@ -53,6 +53,9 @@ spring:
     validationQuery: select 1
     testOnBorrow: true
   redis:
-    host: 127.0.0.1
+#    host: 127.0.0.1
+#    port: 6379
+#    password:
+    host: 114.55.54.0
     port: 6379
-    password:
+    password: zhijingyun
