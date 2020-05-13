@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sitemesh>
+	<!-- 指明满足"/work/*"的页面，将被"/WEB-INF/views/layouts/default.jsp"所装饰 -->
+	<mapping path="/views/*" decorator="/WEB-INF/layouts/adminframe.jsp" />
+	
+	
+	<mapping path="/member/*" decorator="/WEB-INF/layouts/wapframe.jsp" />
+	<!-- 不被渲染的路径. -->  
+<!--   <mapping path="/views/layout" exclue="true"/>   -->
+</sitemesh>

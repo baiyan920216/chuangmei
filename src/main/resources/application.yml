@@ -1,0 +1,58 @@
+#默认的配置文件，这里设置为production(生产环境)，在development(开发环境)时，可以使用 --spring.profiles.active=development运行
+spring:
+  profiles:
+  active: production
+
+---
+server:
+  sessionTimeout: 1800
+  contextPath: /chuangmei
+  port: 8080
+
+---
+#这个是配置工程中上传文件配置
+multipart:
+  maxFileSize: 10Mb
+  maxRequestSize: 20Mb
+
+---
+#日志配置
+logging:
+  path: logs
+  file: logs/chuangmei.log
+  level: ERROR
+
+---
+#Excel导出
+export:
+  fileSaveDir: /WEB-INF/export/file_temp/
+  templatePath: /WEB-INF/export/template/
+  exportAllNumber: 5000
+---
+#spring.resources.static-locations=classpath:/web/
+spring:
+  application:
+  name: chuangmei
+  reresources:
+    static-locations:/upload/
+  view:
+    prefix: /WEB-INF/views/
+    suffix: .jsp
+  datasource:
+    driverClassName: net.sf.log4jdbc.DriverSpy
+    #url: jdbc:log4jdbc:mysql://139.196.26.71/test?characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&autoReconnect=true
+    #username: midea1
+    #password: 123456
+    url: jdbc:log4jdbc:mysql://47.101.39.185/test?characterEncoding=utf8&zeroDateTimeBehavior=convertToNull
+    username: simcom
+    password: SimCom@801120
+    maxActive: 500
+    maxIdle: 200
+    minIdle: 10
+    maxWait: 3000
+    validationQuery: select 1
+    testOnBorrow: true
+  redis:
+    host: 127.0.0.1
+    port: 6379
+    password:
